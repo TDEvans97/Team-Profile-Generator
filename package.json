@@ -1,20 +1,19 @@
 {
   "name": "team-profile-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generate a profile for a team member's info and render in HTML.",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TDEvans97/Team-Profile-Generator.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Tyler Evans",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TDEvans97/Team-Profile-Generator/issues"
