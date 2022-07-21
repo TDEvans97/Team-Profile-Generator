@@ -1,0 +1,62 @@
+header {
+    background-color: #e84756;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #fff;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    padding: 10px;
+}
+
+.card {
+    margin: 15px;
+    width: 20rem;
+    border: solid 1px black;
+    box-shadow: 4px 4px 10px black;
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    background-color: #0077f7;
+    padding: 1rem;
+}
+
+.fas {
+    margin-right: 10px;
+}
+
+.list-container {
+    background-color: #f6f7f9;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.list {
+    color: black;
+    background-color: #f6f7f9;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.list-item {
+    color: black;
+    background-color: #fff;
+    border: solid 1px black;
+    padding: 1rem 1rem;
+}
+
+.email {
+    color:#0077f7;
+}

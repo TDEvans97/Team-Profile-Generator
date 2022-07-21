@@ -2,7 +2,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
-const templateHTML = require("./src/generateHTML");
+const htmlEl = require("./src/generateHTML");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
@@ -156,7 +156,7 @@ function init() {
     `);
     
     // probably call a function, passing in your team members array - send it to another js file 
-    fs.writeFileSync("dist/index.html", templateHTML(teamMembers), "utf-8");
+    fs.writeFileSync("dist/index.html", htmlEl(teamMembers), "utf-8");
     console.log("File written successfully!\n");
     console.log("The written has the following contents to index.html:\n");
     console.log(fs.readFileSync("dist/index.html", "utf8"));
@@ -164,5 +164,5 @@ function init() {
 
   // Calling this at the end of the init will make it the first question asked.
   createManager();
-} 
+};
 init();

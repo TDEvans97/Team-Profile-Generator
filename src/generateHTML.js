@@ -4,51 +4,54 @@ const generateHTML = (teamMembers) => {
     const htmlEl = [];
     // Create functions for each type of employee that returns HTML data into htmlEl.
     const generateManager = manager => {
-        // console.log(manager);
         let managerEl = ` 
-        <div class="card" style="width: 18rem;">
+        <div class="card">
             <div class="card-header">
            ${manager.name} <br/>
            <i class="fas fa-mug-hot"></i>Manager</div>
-           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Employee ID: ${manager.id}</li>
-            <li class="list-group-item">Email: <span id="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
-            <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
-            </ul>
+           <div class = "list-container">
+                <ul class="list">
+                    <li class="list-item">Employee ID: ${manager.id}</li>
+                    <li class="list-item">Email: <span class="email"><a href="mailto:${manager.email}">${manager.email}</a></span></li>
+                    <li class="list-item">Office Number: ${manager.officeNumber}</li>
+                </ul>
+            </div>
         </div>
         `;
         htmlEl.push(managerEl);
     };
 
     const generateEngineer = engineer => {
-        // console.log(engineer);
         let engineerEl = ` 
-        <div class="card" style="width: 18rem;">
+        <div class="card">
             <div class="card-header">
            ${engineer.name} <br/>
            <i class="fas fa-glasses"></i>Engineer</div>
-           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Employee ID: ${engineer.id}</li>
-            <li class="list-group-item">Email: <span id="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
-            <li class="list-group-item">Github Username: <a target="_blank" href="https://github.com/${engineer.github}">${engineer.github}</a></li>
-            </ul>
+            <div class = "list-container">
+                <ul class="list">
+                    <li class="list-item">Employee ID: ${engineer.id}</li>
+                    <li class="list-item">Email: <span class="email"><a href="mailto:${engineer.email}">${engineer.email}</a></span></li>
+                    <li class="list-item">Github: <a target="_blank" href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+                </ul>
+            </div>
         </div>
         `;
         htmlEl.push(engineerEl);
     };
 
     const generateIntern = intern => {
-        // console.log(intern);
         let internEl = ` 
-        <div class="card" style="width: 18rem;">
+        <div class="card">
             <div class="card-header">
            ${intern.name} <br/>
            <i class="fas fa-user-graduate"></i>Intern</div>
-           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Employee ID: ${intern.id}</li>
-            <li class="list-group-item">Email: <span id="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
-            <li class="list-group-item">School: ${intern.school}</li>
-            </ul>
+           <div class = "list-container">
+                <ul class="list">
+                    <li class="list-item">Employee ID: ${intern.id}</li>
+                    <li class="list-item">Email: <span class="email"><a href="mailto:${intern.email}">${intern.email}</a></span></li>
+                    <li class="list-item">School: ${intern.school}</li>
+                </ul>
+            </div>
         </div>
         `;
         htmlEl.push(internEl);
@@ -77,6 +80,7 @@ const generateHTML = (teamMembers) => {
 
 module.exports = htmlEl => {
     // HTML Template that will house all of htmlEl in <main>.
+    // The HTML needs Bootstrap, Font Awesome and CSS Links, but not JS or jQuery since it is not used on the deployed website. 
     return `
     <!DOCTYPE html>
 <html lang="en">
